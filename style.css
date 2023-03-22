@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-top: 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+/* utility */
+
+.my_mt{
+    margin-top: 1rem;
+}
+
+/* Header Section */
+
+header{
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: rgb(90, 106, 248);
+}
+
+#cv_image{
+    max-width: 10%;
+    border: black solid 1px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#my_data{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 2rem;
+}
+
+#my_data h1{
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: black solid 1px;
+}
+
+/* Main Section */
+aside{
+    padding: 0 1rem;
+}
+
+ul li{
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+#left_side{
+    float: left;
+    width: 50%;
+}
+
+#right_side{
+    float: right;
+    width: 50%;
+}
+
+/* footer */
+footer{
+    clear: both;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p{
+    padding: 0 6rem;
+}
