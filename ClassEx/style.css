@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+table{
+    font-family: 'Fira Sans', sans-serif;
+    margin: auto;
+    background-image: url(../img/Wave-100s-941px.png);
+    background-size: cover;
+    text-align: center;
+    width: 30%;
+}
+
+table, td, th{
+    border: black solid 2px;
+}
