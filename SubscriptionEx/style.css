@@ -1,33 +1,105 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
 }
 
-#my_form{
-    width: 30%; 
-    margin: auto; 
-    border: black solid 1px;
-    margin-top: 1rem;
-    background-color: rgb(0, 255, 34); 
-    padding: 1rem; 
-    border-radius: 1rem;
+:root {
+  --main-color: #134074;
+  --second-color: #13315c;
+  --third-color: #0b2545;
+  --fourth-color: #8da9c4;
+  --fifth-color: #eef4ed;
 }
 
-img{
-    border-radius: 50%; 
-    width: 40%;
+#my_form {
+  width: 30%;
+  margin: auto;
+  border: var(--third-color) solid 3px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-input{
-    width: 100%;
-    padding: 0.2rem;
-    border-radius: 1rem;
+#my_form {
+    /* Serious gradient: Black*/
+    color: whitesmoke;
+    background: linear-gradient(
+      45deg,
+      #121212,
+      #383836,
+      #2c3e54,
+      #316e83,
+      #468590,
+      #a8b4b2,
+      #a4a4a4,
+      #b3bf86
+    );
+    background-size: 400% 400%;
+    animation: backgroundChange11 15s ease infinite;
+  }
+  
+  @keyframes backgroundChange11 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+img {
+  border-radius: 50%;
+  width: 40%;
+  border: solid var(--third-color) 0.2rem;
 }
 
-button{
-    margin-top: 0.5rem; 
-    border-radius: 0.5rem; 
-    border: none; 
-    padding: 0.4rem;
+input {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
+
+button {
+    width: 6rem;
+  margin-top: 0.5rem;
+  border-radius: 0.9rem;
+  border: solid var(--third-color) 0.15rem;
+  padding: 0.4rem;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/* button css */
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* button animation */
+
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
