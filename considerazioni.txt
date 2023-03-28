@@ -1,0 +1,5 @@
+Aspetto che tu finisca il sito per darti una valutazione più completa ma intanto posso dirti che mi piace il modo in cui strutturi il css e l'html.
+La nomenclatura delle classi e l'uso degli id mi sembrano appropriati.
+L'html è facile da leggere e il css è ben suddiviso (mi riferisco principalmente al CV, ma vedo che per il sito stai impostando allo stesso modo).
+
+Continua a tenere al centro dell'attenzione la leggibilità del codice e vedrai che non ti sbagli.
