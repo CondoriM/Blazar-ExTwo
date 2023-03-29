@@ -45,24 +45,23 @@ font Style
 
 /* section One */
 
-.section_one .t_center{
-    margin-bottom: 3rem;
-    font-size: 4rem;
-    font-weight: 300;
+.section_one .t_center {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 300;
 }
 
-.card_content h2{
-    font-weight: 300;
-    margin-bottom: 1.5rem;
+.card_content h2 {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
-.card_content p{
-    font-style: italic;
-    font-size: 1.2rem;
-    font-weight: 300;
-    opacity: 0.5;
+.card_content p {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.5;
 }
-
 
 /********** 
 Nav section
@@ -115,6 +114,8 @@ Section One
 **********/
 
 .section_one {
+  margin: auto;
+  width: 70%;
   flex-direction: column;
   padding: 3rem;
 }
