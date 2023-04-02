@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    margin-top: 2rem !important;
+    padding: 2rem;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    background-color: chartreuse;
+    border-radius: 0.6rem;
+}
+
+.todo_list ul{
+    list-style: none;
+}
+
+.todo_list li{
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: rgb(74, 74, 255);
+    border-radius: 0.6rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+input{
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
+
+button{
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
