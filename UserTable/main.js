@@ -1,18 +1,27 @@
-function myTable() {
+let results = [];
 
+function myTable() {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((users) => {
-      let results = users.map(user => ({Name: user.name, Username: user.username, Email: user.email, Phone: user.phone}))
+        results = users.map((user) => ({
+        Name: user.name,
+        Username: user.username,
+        Email: user.email,
+        Phone: user.phone,
+      }));
 
       let body = document.getElementsByTagName("body")[0];
       let tbl = document.createElement("table");
-      tbl.setAttribute("style", "margin: auto; background-color: yellow; border: 1px solid black");
+      tbl.setAttribute(
+        "style",
+        "margin: auto; background-color: yellow; border: 1px solid black"
+      );
 
       let thead = document.createElement("thead");
       let thr = document.createElement("tr");
 
-      let head = {a: "Name",b: "Username",c: "Email",d: "Phone"};
+      let head = { a: "Name", b: "Username", c: "Email", d: "Phone" };
 
       for (i in head) {
         let th = document.createElement("th");
@@ -44,4 +53,63 @@ function myTable() {
     });
 }
 
+let f = document.createElement("form");
+f.setAttribute("id", "myForm");
+f.setAttribute("method", "post");
+f.setAttribute("action", "submit.php");
+
+let u = document.createElement("input");
+u.setAttribute("type", "text");
+u.setAttribute("name", "name");
+
+let i = document.createElement("input");
+i.setAttribute("type", "text");
+i.setAttribute("name", "username");
+
+let e = document.createElement("input");
+e.setAttribute("type", "text");
+e.setAttribute("name", "email");
+
+let p = document.createElement("input");
+p.setAttribute("type", "text");
+p.setAttribute("name", "phone");
+
+let s = document.createElement("input");
+s.setAttribute("type", "submit");
+s.setAttribute("value", "Submit");
+
+f.appendChild(u);
+f.appendChild(i);
+f.appendChild(e);
+f.appendChild(p);
+f.appendChild(s);
+document.getElementsByTagName("body")[0].appendChild(f);
+
+let myPost = function (event) {
+  event.preventDefault();
+
+  const form = document.querySelector("form");
+  const formData = new FormData(form);
+
+  fetch("https://jsonplaceholder.typicode.com/users", {
+    method: "POST",
+    body: JSON.stringify({
+      name: `${formData.get("name")}`,
+      username: `${formData.get("username")}`,
+      email: `${formData.get("email")}`,
+      phone: `${formData.get("phone")}`,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      results.push(json);
+      console.log(results);
+    });
+};
+
 myTable();
+f.addEventListener("submit", myPost, true);
