@@ -1,0 +1,2 @@
+Ciao Miguel. Penso che tu possa pulire il codice ancora un po', astraendo qualche altra funzione in piu e migliorando il nome delle variabili.
+Mi è piaciuto molto il tuo approccio al form e il modo in cui l'hai utilizzato con FormData. Mi dimostra che stai esplorando. Continua così
