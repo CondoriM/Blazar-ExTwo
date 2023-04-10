@@ -4,7 +4,7 @@ function myTable() {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((users) => {
-        results = users.map((user) => ({
+      results = users.map((user) => ({
         Name: user.name,
         Username: user.username,
         Email: user.email,
@@ -58,32 +58,15 @@ f.setAttribute("id", "myForm");
 f.setAttribute("method", "post");
 f.setAttribute("action", "submit.php");
 
-let u = document.createElement("input");
-u.setAttribute("type", "text");
-u.setAttribute("name", "name");
+const submitButton = createSubmitButton();
 
-let i = document.createElement("input");
-i.setAttribute("type", "text");
-i.setAttribute("name", "username");
+["name", "username", "email", "phone"]
+  .map(createFormInput)
+  .concat(submitButton)
+  .forEach((input) => f.appendChild(input))
 
-let e = document.createElement("input");
-e.setAttribute("type", "text");
-e.setAttribute("name", "email");
 
-let p = document.createElement("input");
-p.setAttribute("type", "text");
-p.setAttribute("name", "phone");
-
-let s = document.createElement("input");
-s.setAttribute("type", "submit");
-s.setAttribute("value", "Submit");
-
-f.appendChild(u);
-f.appendChild(i);
-f.appendChild(e);
-f.appendChild(p);
-f.appendChild(s);
-document.getElementsByTagName("body")[0].appendChild(f);
+document.body.appendChild(f);
 
 let myPost = function (event) {
   event.preventDefault();
@@ -113,3 +96,16 @@ let myPost = function (event) {
 
 myTable();
 f.addEventListener("submit", myPost, true);
+function createSubmitButton() {
+  const submitButton = document.createElement("input");
+  submitButton.setAttribute("type", "submit");
+  submitButton.setAttribute("value", "Submit");
+  return submitButton;
+}
+
+function createFormInput(name) {
+  let u = document.createElement("input");
+  u.setAttribute("type", 'text');
+  u.setAttribute("name", name);
+  return u;
+}
