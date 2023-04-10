@@ -1,6 +1,6 @@
 let results = [];
 
-function myTable() {
+function createTable() {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .then((users) => {
@@ -68,7 +68,7 @@ const submitButton = createSubmitButton();
 
 document.body.appendChild(f);
 
-let myPost = function (event) {
+let postUser = function (event) {
   event.preventDefault();
 
   const form = document.querySelector("form");
@@ -94,8 +94,8 @@ let myPost = function (event) {
     });
 };
 
-myTable();
-f.addEventListener("submit", myPost, true);
+createTable();
+f.addEventListener("submit", postUser, true);
 function createSubmitButton() {
   const submitButton = document.createElement("input");
   submitButton.setAttribute("type", "submit");
