@@ -1,9 +1,8 @@
 function newElement() {
   let li = document.createElement("li");
 
-//   con questa riga imposto un attributo per far partire una funzione
-  li.setAttribute("ondblclick", "removeLi(this)");
-  li.setAttribute("onclick", "renameLi(this)");
+  li.addEventListener('dblclick', () => removeLi(li))
+  li.addEventListener('click', () => renameLi(li))
 
   let inputVal = document.getElementById("my_Input").value;
 
