@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  .myTodo {
+    border: black solid 0.2rem;
+    background-color: rgb(8, 255, 20);
+
+    .list_section {
+      li {
+        border: black solid 0.2rem;
+        background-color: rgba(221, 221, 221, 0.932);
+      }
+    }
+  }
+}
