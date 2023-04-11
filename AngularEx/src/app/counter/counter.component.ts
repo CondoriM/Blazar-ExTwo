@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Post, User } from '../Api/my-models';
 
 @Component({
   selector: 'app-counter',
@@ -15,4 +16,7 @@ export class CounterComponent {
   plus(){
     this.Count++
   }
+
+  @Input() user!: User;
+  @Input() posts: Post[] = []
 }

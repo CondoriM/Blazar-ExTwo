@@ -27,5 +27,9 @@
     </div>
   </div>
 
-  <app-counter></app-counter>
+  <app-counter
+    *ngIf="user$ | async as thirdUser"
+    [user]="thirdUser"
+    [posts]="(posts$ | async) || []"
+  ></app-counter>
 </div>
