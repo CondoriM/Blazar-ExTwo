@@ -32,4 +32,7 @@
     [user]="thirdUser"
     [posts]="(posts$ | async) || []"
   ></app-counter>
+
+  <button routerLink="counter">counter</button>
+  <router-outlet></router-outlet>
 </div>
