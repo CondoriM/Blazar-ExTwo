@@ -1,0 +1,26 @@
+Ciao Miguel. Congratulazioni per aver completato il corso!
+Ti scrivo qualche ultimo accorgimento sul tuo lavoro. Premetto che ho capito che non è nulla di completo e somigliante ad un social network, 
+e che principalmente hai sperimentato con il framework, però potevi fare un po' più di ordine e concentrarti di più sull'obiettivo. 
+
+Ho notato che hai installato bootstrap. Bootstrap è un framework css/js con tante utilities e che offre la possibilità di configurare temi, colori etc. 
+Quando usi un framework css, poniti l'obiettivo di usarlo il più possibile e di scrivere meno css possibile. 
+Questo ti permette di avere dei componenti disaccoppiati dal css e quindi ti permette di rifattorizzarli come vuoi con più facilità.   
+Personalmente mi sento soddisfatto quando riesco a cancellare il file .scss del componente. 
+
+Sempre a tema css. Se vuoi scrivere regole che valgano per tutta l'app devi inserirle nel file /src/styles.scss.
+
+Ricorda che di utilizzare <form> per avere il comportamento di default del browser (ENTER per fare submit etc.) anche se gestisci solo un ngModel. 
+Gli utenti se lo aspettano in genere.
+
+Ricorda di pulire il codice e rifattorizzare prima di fare git push: 
+ - crea nuovi componenti che rappresentano elementi logici dell'applicazione a cui ti sembra logico dare un nome (es. Todo-list, todo-item).
+ - rimuovi componenti che non sembrano avere più un senso logico, e il cui nome non significa niente.
+ - scomponi le funzioni troppo lunghe e con troppi parametri. Una funzione deve fare una sola cosa...
+ - rinomina funzioni e variabili se pensi che il loro nome può migliorare ed essere più esplicito.
+ - semplifica le logiche con i boolean il più possibile, meno if (e meno if innestati) ci sono, e più il codice è facile da leggere.
+ etc. etc.
+
+Ovviamente non è finita qui. Non si finisce mai di migliorare. 
+Cerca di rendere il codice leggibile, studia nuove tecniche per farlo. Questo è un lavoro di squadra.
+Allarga la tua comprensione della programmazione imparando nuovi linguaggi e nuove tecnologie e nuovi ambiti. 
+Sperimenta in continuazione, anche a costo di sbagliare. C'è sempre git per rimediare agli errori.
